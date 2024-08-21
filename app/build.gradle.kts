@@ -1,25 +1,18 @@
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.myapp.android.application)
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
 }
 
-android {
-    namespace = "com.example.myapplication"
-    compileSdk = 33
-    buildFeatures {
-        dataBinding = true
-    }
-    defaultConfig {
-        applicationId = "com.example.myapplication"
+android.apply {
+    compileSdk = 30
+
+    defaultConfig.apply {
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 30
         versionCode = 1
         versionName = "1.0.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        vectorDrawables {
-            useSupportLibrary = true
-        }
     }
 
     buildTypes {
@@ -36,11 +29,7 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-    kotlinOptions {
-        jvmTarget = "11"
-//        freeCompilerArgs += "-Xopt-in=kotlinx.coroutines.ExperimentalCoroutinesApi"
-//        freeCompilerArgs += "-Xopt-in=kotlinx.coroutines.FlowPreview"
-    }
+    kotlinOptions.jvmTarget = "11"
 }
 
 dependencies {

@@ -1,5 +1,28 @@
 plugins {
-    alias(libs.plugins.android.application) apply false
-    alias(libs.plugins.android.library) apply false
-    alias(libs.plugins.android.test) apply false
+}
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath(extra["googleOssLicensesPlugin"] as String) {
+            exclude(group = "com.google.protobuf")
+        }
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+    }
+}
+
+
+subprojects {
+}
+
+tasks.register<Delete>("clean") {
+    delete(rootProject.buildDir)
 }
