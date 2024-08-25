@@ -28,7 +28,7 @@ local.properties
 .DS_Store
 
 # IDEA/Android Studio project files, because
-# the project can be imported from settings.gradle.kts*.iml
+# the project can be imported from settings.gradle*.iml
 *.iml
 .idea/*
 !.idea/copyright
