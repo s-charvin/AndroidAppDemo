@@ -1,0 +1,98 @@
+plugins {
+    id 'java-gradle-plugin'
+    id 'org.jetbrains.kotlin.jvm' version '1.6.0'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+repositories {
+    google()
+    mavenCentral()
+}
+
+ext {
+    gradleVersion = '4.1.2'
+    kotlinVersion = '1.6.0'
+    kspVersion = '1.6.21-1.0.6'
+    roomVersion = '2.6.0'
+}
+
+dependencies {
+    compileOnly("com.android.tools.build:gradle:$gradleVersion")
+    compileOnly("com.android.tools.build:gradle-api:$gradleVersion")
+    compileOnly("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
+    compileOnly("com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin:$kspVersion")
+}
+
+tasks {
+    validatePlugins {
+        enableStricterValidation.set(true)
+        failOnWarning.set(true)
+    }
+}
+
+gradlePlugin.plugins {
+    register("androidApplication") {
+        id = "myapp.android.application"
+        implementationClass = "com.myapp.buildlogic.plugins.AndroidApplicationConventionPlugin"
+    }
+
+    register("androidApplicationView") {
+        id = "myapp.android.application.view"
+        implementationClass = "com.myapp.buildlogic.plugins.AndroidApplicationViewConventionPlugin"
+    }
+
+    register("androidApplicationCompose") {
+        id = "myapp.android.application.compose"
+        implementationClass = "com.myapp.buildlogic.plugins.AndroidApplicationComposeConventionPlugin"
+    }
+
+    register("androidLibrary") {
+        id = "myapp.android.library"
+        implementationClass = "com.myapp.buildlogic.plugins.AndroidLibraryConventionPlugin"
+    }
+
+    register("androidLibraryView") {
+        id = "myapp.android.library.view"
+        implementationClass = "com.myapp.buildlogic.plugins.AndroidLibraryViewConventionPlugin"
+    }
+
+    register("androidLibraryCompose") {
+        id = "myapp.android.library.compose"
+        implementationClass = "com.myapp.buildlogic.plugins.AndroidLibraryComposeConventionPlugin"
+    }
+
+    register("androidFeature") {
+        id = "myapp.android.feature"
+        implementationClass = "com.myapp.buildlogic.plugins.AndroidFeatureConventionPlugin"
+    }
+
+    register("androidTest") {
+        id = "myapp.android.test"
+        implementationClass = "com.myapp.buildlogic.plugins.AndroidTestConventionPlugin"
+    }
+
+    register("hilt") {
+        id = "myapp.hilt"
+        implementationClass = "com.myapp.buildlogic.plugins.HiltConventionPlugin"
+    }
+
+    register("androidRoom") {
+        id = "myapp.android.room"
+        implementationClass = "com.myapp.buildlogic.plugins.AndroidRoomConventionPlugin"
+    }
+
+
+    register("androidFlavors") {
+        id = "myapp.android.application.flavors"
+        implementationClass = "com.myapp.buildlogic.plugins.AndroidApplicationFlavorsConventionPlugin"
+    }
+
+    register("jvmLibrary") {
+        id = "myapp.jvm.library"
+        implementationClass = "com.myapp.buildlogic.plugins.JvmLibraryConventionPlugin"
+    }
+}

@@ -1,25 +1,37 @@
+import org.gradle.api.JavaVersion
+
+object Configs {
+    const val applicationId = "com.example.myapp"
+    const val compileSdk = 30
+    const val minSdk = 21
+    const val targetSdk = 30
+    const val versionCode = 1
+    const val versionName = "0.0.1"
+    const val compileCompatibility = "1.8"
+}
 
 object Versions {
     const val composeUi = "1.3.1"
     const val accompanist = "0.34.0"
     const val androidDesugarJdkLibs = "2.0.4"
     // AGP and tools should be updated together
-    const val androidGradlePlugin = "4.1.3"
+    const val androidGradlePlugin = "4.1.2"
     const val androidTools = "31.4.1"
     const val androidxActivity = "1.8.2"
-    const val androidxAppCompat = "1.7.0"
+    const val androidxAppCompat = "1.1.0"
     const val androidxBrowser = "1.8.0"
     const val androidxComposeAlpha = "1.7.0-beta01"
     const val androidxComposeBom = "2024.02.02"
     const val androidxComposeMaterial3Adaptive = "1.0.0-beta01"
     const val androidxComposeMaterial3AdaptiveNavigationSuite = "1.3.0-beta01"
     const val androidxComposeRuntimeTracing = "1.0.0-beta01"
-    const val androidxCore = "1.12.0"
+    const val androidxCore = "1.6.0"
     const val androidxCoreSplashscreen = "1.0.1"
+    const val androidxConstraintlayout = "2.1.3"
     const val androidxDataStore = "1.0.0"
     const val androidxEspresso = "3.5.1"
     const val androidxHiltNavigationCompose = "1.2.0"
-    const val androidxLifecycle = "2.8.3"
+    const val androidxLifecycle = "2.3.1"
     const val androidxMacroBenchmark = "1.2.4"
     const val androidxMetrics = "1.0.0-alpha04"
     const val androidxNavigation = "2.8.0-alpha06"
@@ -38,18 +50,20 @@ object Versions {
     const val firebaseCrashlyticsPlugin = "2.9.9"
     const val firebasePerfPlugin = "1.4.2"
     const val gmsPlugin = "4.4.1"
+    const val googleMaterial = "1.4.0"
     const val googleOss = "17.0.1"
     const val googleOssPlugin = "0.10.6"
-    const val hilt = "2.51.1"
+    const val hilt = "2.33-beta"
     const val hiltExt = "1.1.0"
     const val jacoco = "0.8.7"
     const val junit4 = "4.13.2"
-    const val kotlin = "1.4.10"
+    const val kotlin = "1.6.0"
     const val kotlinxCoroutines = "1.8.0"
     const val kotlinxDatetime = "0.5.0"
     const val kotlinxSerializationJson = "1.6.3"
     const val ksp = "2.0.0-1.0.21"
     const val moduleGraph = "2.5.0"
+    const val navigation = "2.3.3"
     const val okhttp = "4.12.0"
     const val protobuf = "4.26.1"
     const val protobufPlugin = "0.9.4"
@@ -62,7 +76,6 @@ object Versions {
     const val truth = "1.4.2"
     const val turbine = "1.1.0"
 }
-
 
 object Libraries {
     const val accompanistPermissions = "com.google.accompanist:accompanist-permissions:${Versions.accompanist}"
@@ -90,9 +103,13 @@ object Libraries {
     const val androidxComposeUiUtil = "androidx.compose.ui:ui-util"
     const val androidxCoreKtx = "androidx.core:core-ktx:${Versions.androidxCore}"
     const val androidxCoreSplashscreen = "androidx.core:core-splashscreen:${Versions.androidxCoreSplashscreen}"
+    const val androidConstraintlayout = "androidx.constraintlayout:constraintlayout:${Versions.androidxConstraintlayout}"
     const val androidxDataStore = "androidx.datastore:datastore:${Versions.androidxDataStore}"
     const val androidxDataStoreCore = "androidx.datastore:datastore-core:${Versions.androidxDataStore}"
     const val androidxHiltNavigationCompose = "androidx.hilt:hilt-navigation-compose:${Versions.androidxHiltNavigationCompose}"
+    const val androidxLifecycleViewmodelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.androidxLifecycle}"
+    const val androidxLifecycleLivedataKtx = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.androidxLifecycle}"
+    const val androidxLifecycleRuntimeKtx = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.androidxLifecycle}"
     const val androidxLifecycleRuntimeCompose = "androidx.lifecycle:lifecycle-runtime-compose:${Versions.androidxLifecycle}"
     const val androidxLifecycleRuntimeTesting = "androidx.lifecycle:lifecycle-runtime-testing:${Versions.androidxLifecycle}"
     const val androidxLifecycleViewModelCompose = "androidx.lifecycle:lifecycle-viewmodel-compose:${Versions.androidxLifecycle}"
@@ -119,6 +136,7 @@ object Libraries {
     const val firebaseCrashlytics = "com.google.firebase:firebase-crashlytics"
     const val firebasePerformance = "com.google.firebase:firebase-perf"
     const val firebasePerformanceGradle = "com.google.firebase:perf-plugin:${Versions.firebasePerfPlugin}"
+    const val googleMaterial = "com.google.android.material:material:${Versions.googleMaterial}"
     const val googleOssLicenses = "com.google.android.gms:play-services-oss-licenses:${Versions.googleOss}"
     const val googleOssLicensesPlugin = "com.google.android.gms:oss-licenses-plugin:${Versions.googleOssPlugin}"
     const val hiltAndroid = "com.google.dagger:hilt-android:${Versions.hilt}"
@@ -129,6 +147,7 @@ object Libraries {
     const val hiltExtWork = "androidx.hilt:hilt-work:${Versions.hiltExt}"
     const val javaxInject = "javax.inject:javax.inject:1"
     const val kotlinStdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Versions.kotlin}"
+    const val kotlinTest = "org.jetbrains.kotlin:kotlin-test:${Versions.kotlin}"
     const val kotlinxCoroutinesCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.kotlinxCoroutines}"
     const val kotlinxCoroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.kotlinxCoroutines}"
     const val kotlinxCoroutinesGuava = "org.jetbrains.kotlinx:kotlinx-coroutines-guava:${Versions.kotlinxCoroutines}"

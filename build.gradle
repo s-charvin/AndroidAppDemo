@@ -1,0 +1,35 @@
+buildscript {
+    ext {
+        // 因为旧版本不支持 catalog, 也未找到在项目中共享版本的方法.
+        // 这里将版本号写在这里, 以便于修改, 记得保持与 build-logic 内的版本配置一致.
+        gradleVersion = '4.1.2'
+        kotlinVersion = '1.6.0'
+        hiltVersion = '2.33-beta'
+    }
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath("com.android.tools.build:gradle:$gradleVersion")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
+        classpath("com.google.dagger:hilt-android-gradle-plugin:$hiltVersion")
+    }
+}
+
+plugins {
+    // 旧版本的 gradle 插件未在 mavenCentral 或 google 上发布
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
