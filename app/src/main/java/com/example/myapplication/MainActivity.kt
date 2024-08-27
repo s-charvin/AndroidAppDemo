@@ -1,29 +1,38 @@
+/*
+ * Project: MyApplication
+ * File: MainActivity
+ *
+ * Created by: charvin on 8/26/24.
+ * Last modified by: charvin on 8/26/24.
+ *
+ * Description:
+ * 
+ */
+
 package com.example.myapplication
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import androidx.activity.ComponentActivity
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.navigateUp
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
-class MainActivity : AppCompatActivity() {
+@AndroidEntryPoint
+class MainActivity: ComponentActivity() {
+
+//    @Inject
+//    lateinit var networkMonitor: NetworkMonitor // 用于监控网络状态
+
+    private lateinit var navController: NavController
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        enableEdgeToEdge()
-        val greetingText = "Hello Android!"
-        setContentView(android.widget.TextView(this).apply {
-            text = greetingText
-            textSize = 24f
-            gravity = android.view.Gravity.CENTER
-        })
-    }
-
-    private fun enableEdgeToEdge() {
-        // 设置边到边
-        window.decorView.systemUiVisibility = (
-                window.decorView.systemUiVisibility
-                        or android.view.View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                        or android.view.View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                        or android.view.View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                )
-        window.statusBarColor = android.graphics.Color.TRANSPARENT
-        window.navigationBarColor = android.graphics.Color.TRANSPARENT
+        setContentView(R.layout.activity_main)
     }
 }

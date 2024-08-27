@@ -1,6 +1,8 @@
 plugins {
     id("myapp.android.application")
     id("myapp.android.application.view")
+    id("myapp.android.application.flavors")
+    id("myapp.hilt")
 }
 
 android {
@@ -29,4 +31,14 @@ android {
 }
 
 dependencies {
+
+    implementation(project(":core:data"))
+
+    implementation(Libraries.androidxCoreKtx)
+    implementation(Libraries.androidxTracingKtx)
+    implementation(Libraries.androidxNavigationUiKtx)
+    implementation(Libraries.androidxNavigationRuntimeKtx)
+    implementation(Libraries.androidxNavigationFragmentKtx)
+    implementation(Libraries.coilKt)
+    kapt(Libraries.hiltCompiler)
 }

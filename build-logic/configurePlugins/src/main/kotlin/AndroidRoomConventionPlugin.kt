@@ -1,6 +1,5 @@
 package com.myapp.buildlogic.plugins
 
-import com.google.devtools.ksp.gradle.KspExtension
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 
@@ -23,16 +22,12 @@ class AndroidRoomConventionPlugin: Plugin<Project> {
         with(target) {
             with(pluginManager) {
                 apply("androidx.room")
-                apply("com.google.devtools.ksp")
-            }
-            extensions.configure(KspExtension::class.java) {
-//                it.arg("room.schemaLocation", "$projectDir/schemas")
-                it.arg("room.generateKotlin", "true")
+                apply("kotlin-kapt")
             }
 
             dependencies.add("implementation", Libraries.roomRuntime)
             dependencies.add("implementation", Libraries.roomKtx)
-            dependencies.add("ksp", Libraries.roomCompiler)
+            dependencies.add("kapt", Libraries.roomCompiler)
         }
     }
 }

@@ -4,7 +4,7 @@ buildscript {
         // 这里将版本号写在这里, 以便于修改, 记得保持与 build-logic 内的版本配置一致.
         gradleVersion = '4.1.2'
         kotlinVersion = '1.6.0'
-        hiltVersion = '2.33-beta'
+        hiltVersion = '2.38.1'
     }
 
     repositories {
@@ -20,6 +20,7 @@ buildscript {
 }
 
 plugins {
+
     // 旧版本的 gradle 插件未在 mavenCentral 或 google 上发布
 }
 

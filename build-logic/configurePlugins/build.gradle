@@ -16,7 +16,6 @@ repositories {
 ext {
     gradleVersion = '4.1.2'
     kotlinVersion = '1.6.0'
-    kspVersion = '1.6.21-1.0.6'
     roomVersion = '2.6.0'
 }
 
@@ -24,7 +23,7 @@ dependencies {
     compileOnly("com.android.tools.build:gradle:$gradleVersion")
     compileOnly("com.android.tools.build:gradle-api:$gradleVersion")
     compileOnly("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
-    compileOnly("com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin:$kspVersion")
+//    compileOnly("androidx.room:room-gradle-plugin:$roomVersion") // 旧版本的 room 未在 mavenCentral 或 google 上发布
 }
 
 tasks {

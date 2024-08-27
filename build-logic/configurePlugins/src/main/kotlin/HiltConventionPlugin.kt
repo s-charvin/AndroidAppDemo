@@ -19,7 +19,7 @@ import org.gradle.api.Project
 class HiltConventionPlugin: Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
-            pluginManager.apply("com.google.devtools.ksp")
+            pluginManager.apply("kotlin-kapt")
 
             /** Add support for Android modules, based on [AndroidBasePlugin] */
             pluginManager.withPlugin("com.android.base") {
@@ -27,7 +27,7 @@ class HiltConventionPlugin: Plugin<Project> {
                 dependencies.add("implementation", Libraries.hiltAndroid)
             }
 
-            dependencies.add("ksp", Libraries.hiltCompiler)
+            dependencies.add("kapt", Libraries.hiltCompiler)
             dependencies.add("implementation", Libraries.hiltCore)
         }
     }
