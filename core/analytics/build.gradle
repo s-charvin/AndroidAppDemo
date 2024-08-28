@@ -11,7 +11,4 @@ android {
 }
 
 dependencies {
-    api(project(":core:common"))
-
-    implementation(Libraries.kotlinxCoroutinesCore)
 }

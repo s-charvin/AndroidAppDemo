@@ -1,0 +1,8 @@
+plugins {
+    id "myapp.jvm.library"
+    id "myapp.hilt"
+}
+
+dependencies {
+    implementation(Libraries.kotlinxCoroutinesCore)
+}

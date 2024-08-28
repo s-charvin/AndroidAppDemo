@@ -58,7 +58,7 @@ object Versions {
     const val jacoco = "0.8.7"
     const val junit4 = "4.13.2"
     const val kotlin = "1.6.0"
-    const val kotlinxCoroutines = "1.8.0"
+    const val kotlinxCoroutines = "1.5.2"
     const val kotlinxDatetime = "0.5.0"
     const val kotlinxSerializationJson = "1.6.3"
 
