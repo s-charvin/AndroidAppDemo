@@ -6,6 +6,7 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
+    <color name="black30">#4D000000</color>
     <color name="white">#FFFFFFFF</color>
 
     <!-- Light Theme Colors -->
@@ -20,4 +21,115 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="ic_launcher_background_tint">#000000</color>
+    <color name="ic_launcher_foreground_tint">#FCFCFC</color>
+
+    <!-- Light Default Theme -->
+    <color name="primary_light_default">#7B1FA2</color>
+    <color name="on_primary_light_default">#FFFFFF</color>
+    <color name="primary_container_light_default">#E1BEE7</color>
+    <color name="on_primary_container_light_default">#4A148C</color>
+    <color name="secondary_light_default">#FF9800</color>
+    <color name="on_secondary_light_default">#FFFFFF</color>
+    <color name="secondary_container_light_default">#FFE0B2</color>
+    <color name="on_secondary_container_light_default">#E65100</color>
+    <color name="tertiary_light_default">#2196F3</color>
+    <color name="on_tertiary_light_default">#FFFFFF</color>
+    <color name="tertiary_container_light_default">#BBDEFB</color>
+    <color name="on_tertiary_container_light_default">#0D47A1</color>
+    <color name="error_light_default">#F44336</color>
+    <color name="on_error_light_default">#FFFFFF</color>
+    <color name="error_container_light_default">#FFCDD2</color>
+    <color name="on_error_container_light_default">#D32F2F</color>
+    <color name="background_light_default">#FAFAFA</color>
+    <color name="on_background_light_default">#212121</color>
+    <color name="surface_light_default">#FAFAFA</color>
+    <color name="on_surface_light_default">#212121</color>
+    <color name="surface_variant_light_default">#D1C4E9</color>
+    <color name="on_surface_variant_light_default">#757575</color>
+    <color name="inverse_surface_light_default">#212121</color>
+    <color name="inverse_on_surface_light_default">#E1BEE7</color>
+    <color name="outline_light_default">#9E9E9E</color>
+
+    <!-- Dark Default Theme -->
+    <color name="primary_dark_default">#B39DDB</color>
+    <color name="on_primary_dark_default">#4A148C</color>
+    <color name="primary_container_dark_default">#673AB7</color>
+    <color name="on_primary_container_dark_default">#E1BEE7</color>
+    <color name="secondary_dark_default">#FFB74D</color>
+    <color name="on_secondary_dark_default">#E65100</color>
+    <color name="secondary_container_dark_default">#E65100</color>
+    <color name="on_secondary_container_dark_default">#FFE0B2</color>
+    <color name="tertiary_dark_default">#64B5F6</color>
+    <color name="on_tertiary_dark_default">#0D47A1</color>
+    <color name="tertiary_container_dark_default">#0D47A1</color>
+    <color name="on_tertiary_container_dark_default">#BBDEFB</color>
+    <color name="error_dark_default">#E57373</color>
+    <color name="on_error_dark_default">#D32F2F</color>
+    <color name="error_container_dark_default">#EF5350</color>
+    <color name="on_error_container_dark_default">#FFCDD2</color>
+    <color name="background_dark_default">#212121</color>
+    <color name="on_background_dark_default">#E1BEE7</color>
+    <color name="surface_dark_default">#212121</color>
+    <color name="on_surface_dark_default">#B39DDB</color>
+    <color name="surface_variant_dark_default">#673AB7</color>
+    <color name="on_surface_variant_dark_default">#B39DDB</color>
+    <color name="inverse_surface_dark_default">#B39DDB</color>
+    <color name="inverse_on_surface_dark_default">#212121</color>
+    <color name="outline_dark_default">#BDBDBD</color>
+
+    <!-- Light Android Theme -->
+    <color name="primary_light_android">#4CAF50</color>
+    <color name="on_primary_light_android">#FFFFFF</color>
+    <color name="primary_container_light_android">#A5D6A7</color>
+    <color name="on_primary_container_light_android">#1B5E20</color>
+    <color name="secondary_light_android">#388E3C</color>
+    <color name="on_secondary_light_android">#FFFFFF</color>
+    <color name="secondary_container_light_android">#81C784</color>
+    <color name="on_secondary_container_light_android">#1B5E20</color>
+    <color name="tertiary_light_android">#009688</color>
+    <color name="on_tertiary_light_android">#FFFFFF</color>
+    <color name="tertiary_container_light_android">#80CBC4</color>
+    <color name="on_tertiary_container_light_android">#004D40</color>
+    <color name="error_light_android">#F44336</color>
+    <color name="on_error_light_android">#FFFFFF</color>
+    <color name="error_container_light_android">#FFCDD2</color>
+    <color name="on_error_container_light_android">#D32F2F</color>
+    <color name="background_light_android">#E0F2F1</color>
+    <color name="on_background_light_android">#004D40</color>
+    <color name="surface_light_android">#E0F2F1</color>
+    <color name="on_surface_light_android">#004D40</color>
+    <color name="surface_variant_light_android">#A5D6A7</color>
+    <color name="on_surface_variant_light_android">#004D40</color>
+    <color name="inverse_surface_light_android">#004D40</color>
+    <color name="inverse_on_surface_light_android">#A5D6A7</color>
+    <color name="outline_light_android">#9E9E9E</color>
+
+    <!-- Dark Android Theme -->
+    <color name="primary_dark_android">#81C784</color>
+    <color name="on_primary_dark_android">#1B5E20</color>
+    <color name="primary_container_dark_android">#2E7D32</color>
+    <color name="on_primary_container_dark_android">#A5D6A7</color>
+    <color name="secondary_dark_android">#66BB6A</color>
+    <color name="on_secondary_dark_android">#1B5E20</color>
+    <color name="secondary_container_dark_android">#2E7D32</color>
+    <color name="on_secondary_container_dark_android">#81C784</color>
+    <color name="tertiary_dark_android">#4DB6AC</color>
+    <color name="on_tertiary_dark_android">#004D40</color>
+    <color name="tertiary_container_dark_android">#00796B</color>
+    <color name="on_tertiary_container_dark_android">#80CBC4</color>
+    <color name="error_dark_android">#EF5350</color>
+    <color name="on_error_dark_android">#D32F2F</color>
+    <color name="error_container_dark_android">#C62828</color>
+    <color name="on_error_container_dark_android">#FFCDD2</color>
+    <color name="background_dark_android">#004D40</color>
+    <color name="on_background_dark_android">#81C784</color>
+    <color name="surface_dark_android">#004D40</color>
+    <color name="on_surface_dark_android">#81C784</color>
+    <color name="surface_variant_dark_android">#2E7D32</color>
+    <color name="on_surface_variant_dark_android">#81C784</color>
+    <color name="inverse_surface_dark_android">#81C784</color>
+    <color name="inverse_on_surface_dark_android">#004D40</color>
+    <color name="outline_dark_android">#BDBDBD</color>
 </resources>

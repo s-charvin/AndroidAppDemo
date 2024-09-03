@@ -14,13 +14,13 @@ internal fun Project.configureAndroidViewFoundation(
             viewBinding = true
         }
 
-        dependencies.add("implementation", Libraries.androidxCoreKtx)
-        dependencies.add("implementation", Libraries.androidxAppCompat)
-        dependencies.add("implementation", Libraries.googleMaterial)
-        dependencies.add("implementation",Libraries.androidConstraintlayout)
-        dependencies.add("implementation", Libraries.androidxLifecycleViewmodelKtx)
-        dependencies.add("implementation", Libraries.androidxLifecycleLivedataKtx)
-        dependencies.add("implementation", Libraries.androidxLifecycleRuntimeKtx)
+//        dependencies.add("implementation", Libraries.androidxCoreKtx)
+//        dependencies.add("implementation", Libraries.androidxAppCompat)
+//        dependencies.add("implementation", Libraries.googleMaterial)
+//        dependencies.add("implementation",Libraries.androidConstraintlayout)
+//        dependencies.add("implementation", Libraries.androidxLifecycleViewmodelKtx)
+//        dependencies.add("implementation", Libraries.androidxLifecycleLivedataKtx)
+//        dependencies.add("implementation", Libraries.androidxLifecycleRuntimeKtx)
     }
 }
 

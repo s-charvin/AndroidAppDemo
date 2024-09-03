@@ -35,12 +35,23 @@ dependencies {
     implementation(project(":core:analytics"))
     implementation(project(":core:common"))
     implementation(project(":core:data"))
+    implementation(project(":feature:splash-screen"))
 
     implementation(Libraries.androidxCoreKtx)
     implementation(Libraries.androidxTracingKtx)
-    implementation(Libraries.androidxNavigationUiKtx)
-    implementation(Libraries.androidxNavigationRuntimeKtx)
-    implementation(Libraries.androidxNavigationFragmentKtx)
-    implementation(Libraries.coilKt)
+
+    implementation(Libraries.androidConstraintlayout)
+
+    implementation(Libraries.androidxFragmentKtx)
+//    implementation(Libraries.androidxNavigationUiKtx)
+//    implementation(Libraries.androidxNavigationRuntimeKtx)
+//    implementation(Libraries.androidxNavigationFragmentKtx)
+//    implementation(Libraries.androidxCoreSplashscreen)
+
+    implementation(Libraries.androidxLifecycleRuntimeKtx)
+    implementation(Libraries.androidxLifecycleLivedataKtx)
+    implementation(Libraries.androidxLifecycleViewmodelKtx)
+
+//    implementation(Libraries.coilKt)
     kapt(Libraries.hiltCompiler)
 }

@@ -20,7 +20,6 @@ buildscript {
 }
 
 plugins {
-
     // 旧版本的 gradle 插件未在 mavenCentral 或 google 上发布
 }
 

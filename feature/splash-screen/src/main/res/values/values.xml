@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ResourceName">
+
+    <!-- 自定义可变属性, 包括: 启动屏主题, 启动屏图标, 启动屏图标大小, 启动屏图标背景颜色, 启动屏背景 -->
+    <attr name="postSplashScreenTheme" format="reference" />
+    <attr name="windowSplashScreenIcon" format="reference" />
+    <attr name="splashScreenIconSize" format="dimension"/>
+    <attr name="windowSplashScreenIconBackgroundColor" format="color" />
+    <attr name="windowSplashScreenBackground" format="color" />
+
+
+
+    <dimen name="splashscreen_icon_size">?splashScreenIconSize</dimen>
+
+    <style name="Base.Theme.SplashScreen" parent="android:Theme.DeviceDefault.NoActionBar"/>
+    <style name="Base.Theme.SplashScreen.Light" parent="android:Theme.DeviceDefault.Light.NoActionBar"/>
+    <!-- 启动屏夜间主题配置, 用于在 values-night 文件夹中覆盖夜间模式的特定属性 -->
+    <style name="Base.Theme.SplashScreen.DayNight" parent="Base.Theme.SplashScreen.Light"/>
+
+    <!-- 启动屏主题, 包括对状态栏, 导航栏, 标题栏, 背景等的配置, 以及对当前主题所需要的启动屏图标大小, 启动屏背景等自定义属性的赋值 -->
+    <style name="Theme.SplashScreen" parent="Base.Theme.SplashScreen.DayNight">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:opacity">opaque</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:fitsSystemWindows">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowBackground">@drawable/compat_splash_screen</item>
+
+        <item name="windowSplashScreenIcon">@android:drawable/sym_def_app_icon</item>
+        <item name="splashScreenIconSize">288dp</item>
+        <item name="postSplashScreenTheme">?android:attr/theme</item>
+        <item name="windowSplashScreenBackground">?android:colorBackground</item>
+    </style>
+</resources>

@@ -2,9 +2,9 @@ import org.gradle.api.JavaVersion
 
 object Configs {
     const val applicationId = "com.example.myapp"
-    const val compileSdk = 30
+    const val compileSdk = 31
     const val minSdk = 21
-    const val targetSdk = 30
+    const val targetSdk = 31
     const val versionCode = 1
     const val versionName = "0.0.1"
     const val compileCompatibility = "1.8"
@@ -31,7 +31,7 @@ object Versions {
     const val androidxDataStore = "1.0.0"
     const val androidxEspresso = "3.5.1"
     const val androidxHiltNavigationCompose = "1.2.0"
-    const val androidxLifecycle = "2.3.1"
+    const val androidxLifecycle = "2.5.1"
     const val androidxMacroBenchmark = "1.2.4"
     const val androidxMetrics = "1.0.0-alpha04"
     const val androidxNavigation = "2.8.0-alpha06"
@@ -58,8 +58,8 @@ object Versions {
     const val jacoco = "0.8.7"
     const val junit4 = "4.13.2"
     const val kotlin = "1.6.0"
-    const val kotlinxCoroutines = "1.5.2"
-    const val kotlinxDatetime = "0.5.0"
+    const val kotlinxCoroutines = "1.6.4"
+    const val kotlinxDatetime = "0.3.3"
     const val kotlinxSerializationJson = "1.6.3"
 
     const val moduleGraph = "2.5.0"
@@ -122,9 +122,11 @@ object Libraries {
     const val androidConstraintlayout = "androidx.constraintlayout:constraintlayout:${Versions.androidxConstraintlayout}"
     const val androidxDataStore = "androidx.datastore:datastore:${Versions.androidxDataStore}"
     const val androidxDataStoreCore = "androidx.datastore:datastore-core:${Versions.androidxDataStore}"
+    const val androidxDataStorePreferences = "androidx.datastore:datastore-preferences:${Versions.androidxDataStore}"
     const val androidxLifecycleViewmodelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.androidxLifecycle}"
     const val androidxLifecycleLivedataKtx = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.androidxLifecycle}"
     const val androidxLifecycleRuntimeKtx = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.androidxLifecycle}"
+    const val androidxLifecycleRuntimeAndroid = "androidx.lifecycle:lifecycle-runtime-android:${Versions.androidxLifecycle}"
     const val androidxLifecycleRuntimeTesting = "androidx.lifecycle:lifecycle-runtime-testing:${Versions.androidxLifecycle}"
     const val androidxLifecycleViewModelCompose = "androidx.lifecycle:lifecycle-viewmodel-compose:${Versions.androidxLifecycle}"
     const val androidxMetrics = "androidx.metrics:metrics-performance:${Versions.androidxMetrics}"

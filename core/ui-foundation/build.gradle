@@ -1,0 +1,13 @@
+plugins {
+    id "myapp.android.library"
+    id "myapp.android.library.view"
+}
+
+android {
+    defaultConfig {
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+}
+
+dependencies {
+}

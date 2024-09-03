@@ -1,0 +1,23 @@
+plugins {
+    id "myapp.android.library"
+    id "myapp.hilt"
+}
+
+android {
+    defaultConfig {
+        consumerProguardFiles("consumer-proguard-rules.pro")
+    }
+
+    testOptions {
+        unitTests {
+        }
+    }
+}
+
+dependencies {
+    api(Libraries.androidxDataStore)
+    api(Libraries.androidxDataStorePreferences)
+    api(project(":core:model"))
+
+    implementation(project(":core:common"))
+}

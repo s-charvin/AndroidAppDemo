@@ -9,7 +9,7 @@
         android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="MainActivity"
+        android:text="Hello World!"
         android:textAlignment="center"
         android:textSize="52sp"
         app:layout_constraintBottom_toBottomOf="parent"

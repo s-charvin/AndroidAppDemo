@@ -11,7 +11,7 @@
 
 package com.example.myapp.core.data.repository
 
-import com.example.myapp.core.data.model.UserNewsResource
+import com.example.myapp.core.model.data.UserNewsResource
 import kotlinx.coroutines.flow.Flow
 
 interface UserNewsResourceRepository {
